@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Edad Futura</title>
+</head>
+<body>
+    <h1>Calculadora de Edad Futura</h1>
+
+    <label for="edadActual">Ingresa tu edad actual:</label>
+    <input type="text" id="edadActual" placeholder="Edad actual"><br><br>
+    <button onclick="calcularEdadFutura()">Calcular Edad Futura</button>
+    
+    <div id="resultadoEdadFutura"></div>
+    
+    <script>
+        function calcularEdadFutura() {
+
+            var edadActual = parseInt(document.getElementById("edadActual").value);
+            
+            if (isNaN(edadActual) || edadActual < 0) {
+                document.getElementById("resultadoEdadFutura").innerHTML = "Por favor ingresa una edad válida.";
+            } else {
+                var edadFutura = edadActual + 10;
+                
+                document.getElementById("resultadoEdadFutura").innerHTML = "Tu edad dentro de 10 años será: " + edadFutura;
+            }
+        }
+    </script>
+</body>
+</html>

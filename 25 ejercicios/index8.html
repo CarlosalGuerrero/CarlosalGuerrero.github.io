@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuento</title>
+</head>
+<body>
+    <h1>Calculadora de Descuento</h1>
+    
+    <label for="precioOriginal">Precio Original:</label>
+    <input type="text" id="precioOriginal" placeholder="Precio original"><br><br>
+    
+    <label for="porcentajeDescuento">Porcentaje de Descuento:</label>
+    <input type="text" id="porcentajeDescuento" placeholder="Porcentaje de descuento"><br><br>
+    
+    <button onclick="calcularDescuento()">Calcular Descuento</button>
+    
+    <div id="resultadoDescuento"></div>
+    
+    <script>
+        function calcularDescuento() {
+            var precioOriginal = parseFloat(document.getElementById("precioOriginal").value);
+            var porcentajeDescuento = parseFloat(document.getElementById("porcentajeDescuento").value);
+            
+            if (isNaN(precioOriginal) || isNaN(porcentajeDescuento) || porcentajeDescuento < 0 || porcentajeDescuento > 100) {
+                document.getElementById("resultadoDescuento").innerHTML = "Por favor ingresa valores válidos.";
+            } else {
+                var precioConDescuento = precioOriginal - (precioOriginal * (porcentajeDescuento / 100));
+                document.getElementById("resultadoDescuento").innerHTML = "El precio con descuento es: $" + precioConDescuento.toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>

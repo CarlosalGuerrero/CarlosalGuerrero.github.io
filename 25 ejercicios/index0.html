@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Apellido</title>
+</head>
+
+<body>
+    <h2>Ingrese su apellido:</h2>
+    <form id="miFormulario">
+        <input type="text" id="apellidoInput" placeholder="Ingrese su apellido...">
+        <button type="button" id="enviarBtn">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById("enviarBtn").addEventListener("click", function () {
+            var apellido = document.getElementById("apellidoInput").value;
+
+            document.write("Su apellido es: " + apellido);
+        });
+    </script>
+</body>
+
+</html>

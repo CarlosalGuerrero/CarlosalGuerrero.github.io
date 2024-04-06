@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Día Hábil</title>
+</head>
+<body>
+    <h1>Verificador de Día Hábil</h1>
+    
+    <label for="inputDia">Ingresa un número del 1 al 7 para representar el día de la semana:</label>
+    <input type="text" id="inputDia" placeholder="Día de la semana"><br><br>
+    
+    <button onclick="esDiaHabil()">Verificar Día Hábil</button>
+    
+    <div id="resultadoDiaHabil"></div>
+    
+    <script>
+        function esDiaHabil() {
+            var diaSemana = parseInt(document.getElementById("inputDia").value);
+            var esHabil = (diaSemana >= 1 && diaSemana <= 5);
+            document.getElementById("resultadoDiaHabil").innerHTML = esHabil;
+        }
+    </script>
+</body>
+</html>

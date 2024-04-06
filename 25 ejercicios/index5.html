@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>calculadora de area de circulo</h1>
+    <label for="inputradio">ingrrese el radio del circulo </label>
+        <input type="text"id="inputradio"placeholder ="area ddel circulo">
+        <button onclick="calcularymostrararea()">calcular area</button>
+        <div id="resultadoarea"></div>
+        <script>
+            function calcularymostrararea(){
+                var radio=parseFloat(document.getElementById("inputradio").value);
+                if (isNaN(radio)    || radio<=0){
+                    document.getElementById("resultadoarea").innerHTML="el radio debe ser un numero positivo";
+                }else{
+                    var area=Math.PI*Math.pow(radio,2);
+                    document.getElementById("resultadoarea").innerHTML="el area del circulo es:"+area.toFixed(2);
+                }
+            }
+
+        </script>
+</body>
+</html>

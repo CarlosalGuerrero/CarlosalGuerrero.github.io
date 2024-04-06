@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador de Calificaciones</title>
+</head>
+<body>
+    <h1>Evaluador de Calificaciones</h1>
+    
+    <label for="inputCalificacion">Ingresa la calificación:</label>
+    <input type="text" id="inputCalificacion" placeholder="Calificación"><br><br>
+    
+    <button onclick="evaluarCalificaciones()">Evaluar Calificación</button>
+    
+    <div id="mensajeEvaluacion"></div>
+    
+    <script>
+        function evaluarCalificaciones() {
+            var calificacion = parseInt(document.getElementById("inputCalificacion").value);
+            var mensaje;
+
+            if (calificacion >= 90 && calificacion <= 100) {
+                mensaje = "Excelente";
+            } else if (calificacion >= 80 && calificacion <= 89) {
+                mensaje = "Bueno";
+            } else if (calificacion >= 70 && calificacion <= 79) {
+                mensaje = "Regular";
+            } else {
+                mensaje = "Insuficiente";
+            }
+
+            document.getElementById("mensajeEvaluacion").innerHTML = mensaje;
+        }
+    </script>
+</body>
+</html>

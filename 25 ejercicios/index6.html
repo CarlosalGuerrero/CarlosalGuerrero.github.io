@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Promedio de Tres Números</title>
+</head>
+<body>
+    <h1>Calculadora de Promedio de Tres Números</h1>
+    
+    <label for="numero1">Número 1:</label>
+    <input type="text" id="numero1" placeholder="Número 1"><br><br>
+    
+    <label for="numero2">Número 2:</label>
+    <input type="text" id="numero2" placeholder="Número 2"><br><br>
+    
+    <label for="numero3">Número 3:</label>
+    <input type="text" id="numero3" placeholder="Número 3"><br><br>
+    <button onclick="calcularYMostrarPromedio()">Calcular Promedio</button>
+    
+    <div id="resultadoPromedio"></div>
+    
+    <script>
+        function calcularYMostrarPromedio() {
+            var num1 = parseFloat(document.getElementById("numero1").value);
+            var num2 = parseFloat(document.getElementById("numero2").value);
+            var num3 = parseFloat(document.getElementById("numero3").value);
+            
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                document.getElementById("resultadoPromedio").innerHTML = "Por favor ingresa tres números válidos.";
+            } else {
+                var promedio = (num1 + num2 + num3) / 3;
+                
+                document.getElementById("resultadoPromedio").innerHTML = "El promedio de los tres números es: " + promedio.toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+      

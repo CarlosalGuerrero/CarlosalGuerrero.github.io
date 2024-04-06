@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nombre animal </h1>
+
+    <input type="text" id="inputNombreanimal" placeholder="Ingresa el nombre del animal">
+    
+    <button onclick="mostrarnombreanimal()">Mostrar nombre</button>
+    
+    <div id="nombreanimal"></div>
+    
+    <script>
+        function mostrarnombreanimal() {
+            var nombreanimal = document.getElementById("inputNombreanimal").value;
+            
+            var elementoanimal= document.getElementById("nombreanimal");
+            
+            elementoanimal.innerHTML = "el nombre del animal es: " + nombreanimal;
+        }
+            </script>
+</body>
+</html>
+            
+
+    

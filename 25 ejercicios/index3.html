@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Película</title>
+</head>
+<body>
+    <h1>Nombre de la película</h1>
+
+    <input type="text" id="inputNombrePelicula" placeholder="Ingresa el nombre de la película">
+    
+    <button onclick="mostrarPelicula()">Mostrar Película</button>
+    
+    <div id="nombrePelicula"></div>
+    
+    <script>
+        function mostrarPelicula() {
+            var nombrePelicula = document.getElementById("inputNombrePelicula").value;
+            
+            var elementoPelicula = document.getElementById("nombrePelicula");
+            
+            elementoPelicula.innerHTML = "La película es: " + nombrePelicula;
+        }
+    </script>
+</body>
+</html>

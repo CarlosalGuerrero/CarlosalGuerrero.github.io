@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Vocal</title>
+</head>
+<body>
+    <h1>Verificador de Vocal</h1>
+    
+    <label for="inputLetra">Ingresa una letra:</label>
+    <input type="text" id="inputLetra" placeholder="Letra"><br><br>
+    
+    <button onclick="esVocal()">Verificar Vocal</button>
+    
+    <div id="resultadoVocal"></div>
+    
+    <script>
+        function esVocal() {
+            var letra = document.getElementById("inputLetra").value.toLowerCase();
+            var vocales = ['a', 'e', 'i', 'o', 'u'];
+            var esVocal = vocales.includes(letra);
+            document.getElementById("resultadoVocal").innerHTML = esVocal;
+        }
+    </script>
+</body>
+</html>
